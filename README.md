@@ -1,4 +1,4 @@
-## Hello, I'm Preksha Patil! Welcome to my GitHub!
+## Hello, I'm Preksha! Welcome to my GitHub!
 <!--
 **prekshapatil/prekshapatil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
