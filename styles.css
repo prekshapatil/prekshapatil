@@ -239,9 +239,25 @@ section.visible {
     margin-bottom: 10px; /* Adjust margins to make the content more consistent */
 }
 
-.card h3 {
-    font-size: 1.5rem;
+/* Style for Project Links */
+.card h3 a {
+    color: #2c3e50;  /* Dark gray color */
+    text-decoration: none;  /* Remove underline */
+    font-weight: 600;  /* Make text slightly bold */
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition for color and transformation */
 }
+
+.card h3 a:hover {
+    color: #ff6f61;  /* Change color on hover */
+    transform: scale(1.05);  /* Slightly scale the text when hovered */
+    text-decoration: underline;  /* Add underline on hover */
+}
+
+.card h3 a:focus {
+    outline: 2px solid #ff6f61;  /* Outline when focused */
+    outline-offset: 4px;  /* Space between outline and text */
+}
+
 
 .card p {
     font-size: 1rem;
