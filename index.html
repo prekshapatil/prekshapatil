@@ -330,33 +330,36 @@
 <!-- Script for Form Submission Handling -->
 <script>
     // Handle form submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission (which redirects)
+    // Handle form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission (which redirects)
 
-        // Get form data
-        var formData = new FormData(this);
+    // Get form data
+    var formData = new FormData(this);
 
-        // Send form data to Formspree using Fetch API
-        fetch('https://formspree.io/f/xovenzgp', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                // Show success message on successful submission
-                document.getElementById('success-message').style.display = 'block';
-                // Optionally hide the form after submission
-                document.getElementById('contact-form').style.display = 'none';
-            } else {
-                // Handle errors
-                alert("There was an issue with the form submission. Please try again.");
-            }
-        })
-        .catch(error => {
-            console.error("Error submitting form:", error);
-            alert("There was an error submitting your form. Please try again.");
-        });
+    // Send form data to Formspree using Fetch API
+    fetch('https://formspree.io/f/xovenzgp', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json()) // Parse the response as JSON
+    .then(data => {
+        if (data.ok) { // Check if the response is successful
+            // Show success message on successful submission
+            document.getElementById('success-message').style.display = 'block';
+            // Optionally hide the form after submission
+            document.getElementById('contact-form').style.display = 'none';
+        } else {
+            // Handle the error message from Formspree
+            alert("There was an issue with the form submission. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error("Error submitting form:", error);
+        alert("There was an error submitting your form. Please try again.");
     });
+});
+
 </script>
 
     
