@@ -438,6 +438,7 @@ footer a:focus {
     border: none;
 }
 
+
 @media (max-width: 768px) {
     .grid {
         flex-direction: column;
