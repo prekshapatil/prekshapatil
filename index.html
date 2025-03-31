@@ -321,18 +321,18 @@
         <button type="submit" class="submit-btn">Send Message</button>
     </form>
 
-    <!-- Success Message Section -->
-    <div id="success-message" style="display:none; color: green; margin-top: 20px;">
-        <p>Thank you! Your message has been sent successfully.</p>
+    <!-- Success Message -->
+    <div id="success-message" style="display:none; padding: 10px; background-color: #4CAF50; color: white; border-radius: 5px; margin-top: 20px;">
+        Your message has been successfully sent! Thank you for reaching out.
     </div>
+
 </section>
 
 <!-- Script for Form Submission Handling -->
 <script>
     // Handle form submission
-    // Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission (which redirects)
+    event.preventDefault(); // Prevent the default form submission
 
     // Get form data
     var formData = new FormData(this);
@@ -348,7 +348,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             // Show success message on successful submission
             document.getElementById('success-message').style.display = 'block';
             // Optionally hide the form after submission
-            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('contact-form').reset(); // Clear form fields
         } else {
             // Handle the error message from Formspree
             alert("There was an issue with the form submission. Please try again.");
@@ -359,7 +359,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert("There was an error submitting your form. Please try again.");
     });
 });
-
 </script>
 
     
