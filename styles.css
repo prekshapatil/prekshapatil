@@ -36,9 +36,12 @@ nav a {
     position: relative;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover {
     color: #ff6f61;
+    text-decoration: underline;
+    transform: scale(1.1);
 }
+
 
 /* Focus Styles for Accessibility */
 nav a:focus {
