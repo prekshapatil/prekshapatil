@@ -12,7 +12,7 @@ html, body {
     background: linear-gradient(to bottom, #ffffff, #e8e8e8);
     color: #333;
     scroll-behavior: smooth; /* Enables smooth scrolling */
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-x: hidden;
 }
 
 nav {
