@@ -437,3 +437,12 @@ footer a:focus {
     height: 100%;
     border: none;
 }
+
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
